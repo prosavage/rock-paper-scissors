@@ -32,6 +32,7 @@ impl Game {
     }
 
     pub fn play(&mut self) {
+        println!("Starting Rock Paper Scissors Game w/ {} rounds.", &self.max_rounds);
         while self.rounds.len() < self.max_rounds.try_into().unwrap() {
             self.print_separator();
             self.play_round();
